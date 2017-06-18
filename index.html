@@ -12,15 +12,6 @@ h4 {
 <title> ARTICLEhost </title>
 </head>
 <body>
-<php?
-$path = dirname(__FILE__).'/newfile.txt';
-$fp = fopen($path, 'a');
-if(!$fp){
-echo 'file is not opend';
-}
-fwrite($fp, 'this is simple text written');
-fclose($fp);
-?>
 <h1> ARTICLEhost </h1>
 <hr>
 articles:<br>
