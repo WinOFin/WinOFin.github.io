@@ -12,6 +12,16 @@ h4 {
 <title> ARTICLEhost </title>
 </head>
 <body>
+   <?php 
+ $file = "vistors.txt"; 
+
+ $handle = fopen($file, 'r+') ; 
+
+ $data = fread($handle, 512) ; 
+
+ $count = $data + 1;
+ print "You are visitor ".$count; 
+ ?>
 <h1> ARTICLEhost </h1>
 <hr>
 articles:<br>
