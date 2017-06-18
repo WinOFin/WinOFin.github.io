@@ -12,20 +12,26 @@ h4 {
 <title> ARTICLEhost </title>
 </head>
 <body>
-<!-- hitwebcounter Code START -->
-<a href="http://www.hitwebcounter.com" target="_blank">
-<img src="http://hitwebcounter.com/counter/counter.php?page=6699765&style=0001&nbdigits=5&type=page&initCount=0" title="webs counters" Alt="webs counters"   border="0" >
-</a>                                        <br/>
-                                        <!-- hitwebcounter.com --><a href="http://www.hitwebcounter.com" title="Total Count" 
-                                        target="_blank" style="font-family: sans-serif, Arial, Helvetica; 
-                                        font-size: 9px; color: #6D6C72; text-decoration: none ;"><strong>Total Count                                        </strong>
-                                        </a>   
+  <?php 
+$fn = "visitors.txt"; 
+$file = fopen($fn, "w+"); 
+$size = filesize($fn); 
+
+if($_POST['addition']) fwrite($file, $_POST['addition']); 
+
+$text = fread($file, $size); 
+fclose($file); 
+?>
 <h1> ARTICLEhost </h1>
 <hr>
 articles:<br>
 <p1 id="1"> </p1>
 <h3> create new </h3>
-<textarea id="userInput"> type article here. </textarea>
+<form action="<?=$PHP_SELF?>" method="post"> 
+<textarea><?=$text?></textarea><br/> 
+<input type="text" name="addition"/> 
+<input type="submit"/> 
+</form>
 <br>
 <h4> Note that all articles are going to be avaible to be edited after 12 hours </h4>
 <br>
