@@ -1,42 +1,29 @@
-<DOCTYPE html>
-<?php
-$action = $_GET["action"];
-$myText = $_POST["mytext"];
-
-if($action = "save") {
-  file_put_contents($"visitors.txt", $myText);
-}
-?>
+<!DOCTYPE html>
 <html>
-<head>
-<style>
-h1 {
-  color:red;
-}
-h4 {
-  color:red;
-}
-</style>
-<title> ARTICLEhost </title>
-</head>
-<body>
-<h1> ARTICLEhost </h1>
-<hr>
-articles:<br>
-<p1 id="1"> </p1>
-<h3> create new </h3>
-<br>
-<form action="?action=save" name="myform" method="get">
-<input type=text name="mytext">
-<input type="submit" value="save">
-</form
-<h4> Note that all articles are going to be avaible to be edited after 12 hours </h4>
-<br>
-<script>
-function submit() {
-  var userInput = document.getElementById("userInput").value;
-  document.getElementById("1").innerHTML = userInput;
-}
-</script>
-</body>
+    <head>
+    <style>
+   body {
+   
+   }
+   nav {
+      color:purple; 
+      padding: 10px;
+      border-style:solid;
+      border-width: 2px;
+      border-color: purple;
+      background-color:black;
+   }
+    </style>
+    <div class="head">
+        <title>THE MAIN PAGE OF PURPLEGAMERFINLAND</title>
+        <nav>
+            <div>PURPLEGAMERFINLAND</div>
+            <a href="google.com">google</a>
+            </div>
+        </nav>
+        </div>
+    </head>
+    <body>
+        
+    </body>
 </html>
